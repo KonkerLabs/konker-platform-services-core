@@ -3,14 +3,45 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>konker.registry.services.core.repository</artifactId>
         <groupId>com.konkerlabs</groupId>
+        <artifactId>konker-platform-services-core</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../konker.registry.services.core.repository/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>konker.registry.services.core.business</artifactId>
+
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <!-- Compile scope -->
+        <!-- Konker -->
+        <dependency>
+            <groupId>com.konkerlabs</groupId>
+            <artifactId>konker.registry.services.core.common</artifactId>
+            <version>${konker.registry.services.core.modules.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.konkerlabs</groupId>
+            <artifactId>konker.registry.services.core.repository</artifactId>
+            <version>${konker.registry.services.core.modules.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.konkerlabs</groupId>
+            <artifactId>konker.registry.services.core.audit</artifactId>
+            <version>${konker.registry.services.core.modules.version}</version>
+        </dependency>
+        <!-- 3rd party -->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-mongodb</artifactId>
+            <version>${spring.data.version}</version>
+            <optional>true</optional>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
 
 
 </project>

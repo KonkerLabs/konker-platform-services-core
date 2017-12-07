@@ -21,6 +21,7 @@
     <modules>
         <module>konker.registry.services.core.common</module>
         <module>konker.registry.services.core.repository</module>
+        <module>konker.registry.services.core.business</module>
         <module>konker.registry.services.core.integration</module>
         <module>konker.registry.services.core.audit</module>
     </modules>
