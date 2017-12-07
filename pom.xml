@@ -4,16 +4,25 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.konkerlabs</groupId>
-    <artifactId>konker.platform-services-core</artifactId>
+    <artifactId>konker-platform-services-core</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <properties>
-        <konker.registry.services.mail.version>1.0-SNAPSHOT</konker.registry.services.mail.version>
+        <!-- konker -->
+        <konker.registry.services.core.modules.version>1.0-SNAPSHOT</konker.registry.services.core.modules.version>
+        <!-- 3rd party -->
+        <spring.data.version>1.10.1.RELEASE</spring.data.version>
+        <querydsl.version>4.1.4</querydsl.version>
+        <nosqlunit.version>0.8.1</nosqlunit.version>
+
     </properties>
 
     <modules>
         <module>konker.registry.services.core.common</module>
+        <module>konker.registry.services.core.repository</module>
+        <module>konker.registry.services.core.integration</module>
+        <module>konker.registry.services.core.audit</module>
     </modules>
 
     <build>
